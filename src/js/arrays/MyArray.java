@@ -118,5 +118,24 @@ public class MyArray {
         return result;
     }
 
+    //unshift() - adds given parameter to first position in array
+    public void unshift(int toUnshift){
+        if(this.arr.length == this.size){
+            int[] newArray = new int[2 * this.arr.length];
+            for(int i = 0; i < this.size; i++){
+                newArray[i+1] = this.arr[i];
+            }
+            newArray[0] = toUnshift;
+            this.arr = newArray;
+            this.size++;
+        } else{
+            for(int i = this.size; i > 0; i--){
+                this.arr[i] = this.arr[i-1];
+            }
+            this.arr[0] = toUnshift;
+            this.size++;
+        }
+    }
+
 
 }

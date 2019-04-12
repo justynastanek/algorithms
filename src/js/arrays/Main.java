@@ -28,5 +28,8 @@ public class Main {
         x.print();
         x.shift();
         x.print();
+
+        x.unshift(10);
+        x.print();
     }
 }
