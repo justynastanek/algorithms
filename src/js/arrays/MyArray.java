@@ -97,6 +97,26 @@ public class MyArray {
         this.size++;
     }
 
+    //shift() - removes first element of array and returns it
+    public int shift(){
+        if(this.size == 0){
+            throw new RuntimeException("Array is empty. Operation incorrect.");
+        }
+        int result = this.arr[0];
+        this.size--;
+        if(this.size <= 0.25 * this.arr.length){
+            int[] newArr = new int[this.arr.length / 2];
+            for(int i = 0; i < this.size; i++){
+                newArr[i] = this.arr[i+1];
+            }
+            this.arr = newArr;
+        } else{
+            for(int i = 0; i < this.size; i++){
+                this.arr[i] = this.arr[i+1];
+            }
+        }
+        return result;
+    }
 
 
 }

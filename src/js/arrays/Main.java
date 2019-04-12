@@ -23,5 +23,10 @@ public class Main {
 
         x.insert(0, 0);
         x.print();
+
+        x.shift();
+        x.print();
+        x.shift();
+        x.print();
     }
 }
