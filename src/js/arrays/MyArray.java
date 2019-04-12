@@ -137,5 +137,14 @@ public class MyArray {
         }
     }
 
+    //isEmpty() - checks if array isEmpty, returns boolean
+    public boolean isEmpty(){
+        if(this.size == 0) return true;
+        return false;
+        }
+    }
 
-}
+    
+
+
+
