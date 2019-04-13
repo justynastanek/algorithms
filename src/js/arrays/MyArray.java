@@ -113,8 +113,10 @@ public class MyArray {
         } else{
             for(int i = 0; i < this.size; i++){
                 this.arr[i] = this.arr[i+1];
+                this.arr[this.size] =0;
             }
         }
+
         return result;
     }
 
@@ -142,6 +144,13 @@ public class MyArray {
         if(this.size == 0) return true;
         return false;
         }
+        
+    //TODO - implement resize method
+    //resize(int newSize)
+    private void resize(int newSize){
+
+    }
+
     }
 
     
